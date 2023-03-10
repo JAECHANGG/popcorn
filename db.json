@@ -59,9 +59,9 @@
         "40+": 2,
         "female": 0,
         "male": 2,
-        "연령모름": 2,
-        "성별모름": 1,
-        "all": 4,
+        "연령모름": 3,
+        "성별모름": 2,
+        "all": 5,
         "": null
       },
       "title": "티파니 락",
@@ -460,9 +460,9 @@
         "40+": 3,
         "female": 0,
         "male": 3,
-        "연령모름": 1,
-        "성별모름": 1,
-        "all": 4
+        "연령모름": 2,
+        "성별모름": 2,
+        "all": 5
       },
       "title": "Weather Monster POP-UP",
       "address": "서울특별시 용산구 이태원로 260 코오롱스포츠 한남점",
@@ -1267,50 +1267,52 @@
       "category": "기타"
     }
   ],
-  "users": [{
-"age": "1995-04-12",
-"email": "abcwockd95@naver.com",
-"gender": "male",
-"nickName": "재창이",
-"phoneNumber": "01063183932",
-"profileImg": null,
-"id": "T0343pkxEAf5tUL3ZQoV7G3vHfs2"
-},
-{
-"age": "1993-06-13",
-"email": "master@gmail.com",
-"gender": "female",
-"nickName": "운영자",
-"phoneNumber": "01086256038",
-"profileImg": null,
-"id": "cbCu7b1YqHZkRT88wEddSmzM6u42"
-},
-{
-"age": "30",
-"email": "mljkpl-hwa@hanmail.net",
-"nickName": "은",
-"id": 2697848176,
-"gender": "female",
-"accessToken": "K-5npvxbsdCPJfrRfpDStwGsuJjFpg8RHQzaop0NCj10EQAAAYbI-XUQ"
-},
-{
-"age": "2008-07-18",
-"email": "jieun12@naver.com",
-"gender": "male",
-"nickName": "배고파",
-"phoneNumber": "01086256038",
-"profileImg": null,
-"id": "vXLobazEqvheXDZP1bL9WJ8EkCw1"
-},
-{
-"age": "1985-12-29",
-"email": "popcorn@gmail.com",
-"gender": "female",
-"nickName": "팝코니",
-"phoneNumber": "01028846776",
-"profileImg": null,
-"id": "pJPlM8pjsfZve2eu2tYgZ333nDd2"
-}],
+  "users": [
+    {
+      "age": "1995-04-12",
+      "email": "abcwockd95@naver.com",
+      "gender": "male",
+      "nickName": "재창이",
+      "phoneNumber": "01063183932",
+      "profileImg": null,
+      "id": "T0343pkxEAf5tUL3ZQoV7G3vHfs2"
+    },
+    {
+      "age": "1993-06-13",
+      "email": "master@gmail.com",
+      "gender": "female",
+      "nickName": "운영자",
+      "phoneNumber": "01086256038",
+      "profileImg": null,
+      "id": "cbCu7b1YqHZkRT88wEddSmzM6u42"
+    },
+    {
+      "age": "30",
+      "email": "mljkpl-hwa@hanmail.net",
+      "nickName": "은",
+      "id": 2697848176,
+      "gender": "female",
+      "accessToken": "K-5npvxbsdCPJfrRfpDStwGsuJjFpg8RHQzaop0NCj10EQAAAYbI-XUQ"
+    },
+    {
+      "age": "2008-07-18",
+      "email": "jieun12@naver.com",
+      "gender": "male",
+      "nickName": "배고파",
+      "phoneNumber": "01086256038",
+      "profileImg": null,
+      "id": "vXLobazEqvheXDZP1bL9WJ8EkCw1"
+    },
+    {
+      "age": "1985-12-29",
+      "email": "popcorn@gmail.com",
+      "gender": "female",
+      "nickName": "팝코니",
+      "phoneNumber": "01028846776",
+      "profileImg": null,
+      "id": "pJPlM8pjsfZve2eu2tYgZ333nDd2"
+    }
+  ],
   "likeHate": [],
   "BookMarkList": [],
   "newStores": [],
