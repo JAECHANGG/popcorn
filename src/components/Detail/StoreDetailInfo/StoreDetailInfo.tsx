@@ -82,7 +82,6 @@ const StoreDetailInfo = ({ detailData }: Props) => {
   const postBookmarkHandler = async () => {
     if (user.isLogin) {
       if (bookMarkState) {
-        console.log('bookMarkState', bookMarkState);
 
         // 북마크가 있을 경우 삭제
         try {
@@ -121,7 +120,7 @@ const StoreDetailInfo = ({ detailData }: Props) => {
             <S.SideTitleWrap>
               <S.SideTitleIconText>
                 <S.ViewCount>{detailData?.view.all}</S.ViewCount>
-                <S.SideTitleText>조회수</S.SideTitleText>
+                <S.SideTitleText style={{marginTop:'10px'}}>조회수</S.SideTitleText>
               </S.SideTitleIconText>
               <S.SideTitleIconText>
                 <S.SideTitleIcon>

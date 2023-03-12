@@ -34,7 +34,8 @@ const MyProfile = () => {
   const currentUserInfos: User | null = auth.currentUser;
   const accessToken = useRecoilValue(kakaoAccessToken);
   const [kakaoUserInfo, setKakaoUserInfo] = useRecoilState(userInfoState);
-
+  console.log('accessToken', accessToken);
+  console.log('accessToken', typeof accessToken);
   // 현재 로그인한 사용자 가져오기
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -42,7 +43,7 @@ const MyProfile = () => {
         setCurrentUser(auth.currentUser);
         setImgUploadUrl(user.photoURL);
       } else {
-        return console.log('로그인 안됨');
+        return;
       }
     });
   }, [auth.currentUser]);
@@ -52,7 +53,7 @@ const MyProfile = () => {
       setImgProfileUrl(currentUserInfos?.photoURL || '');
     }
   }, [currentUserInfos?.photoURL]);
-  console.log('kakaoUser', kakaoUserInfo.nickName);
+
   return (
     <S.MyPageAll>
       <S.MyProfileBox>
@@ -90,18 +91,25 @@ const MyProfile = () => {
           </S.InfoHolder>
         </S.InfoWrapper>
         <S.InfoWrapper>
-          <S.InfoTitle>{accessToken ? '연령' : '생일'}</S.InfoTitle>
+          <S.InfoTitle>
+            {accessToken !== 'undefined' ? '연령' : '생일'}
+          </S.InfoTitle>
           <S.InfoHolder>{userInfos.age}</S.InfoHolder>
         </S.InfoWrapper>
         <S.ButtonContainer>
-          {accessToken ? (
-            ''
-          ) : (
+          {/* accessToken !== 'undefined' => 카카오 로그인 시*/}
+          {accessToken === undefined || accessToken === 'undefined' ? (
             <S.ModifyCompleteButton type="button">
               <MyProfileEditModal />
             </S.ModifyCompleteButton>
+          ) : (
+            ''
           )}
-          {accessToken ? '' : <DeleteAccount />}
+          {accessToken === undefined || accessToken === 'undefined' ? (
+            <DeleteAccount />
+          ) : (
+            ''
+          )}
         </S.ButtonContainer>
       </S.MyProfileBox>
       <S.TabContainer>

@@ -13,6 +13,7 @@ import StoreDetailInfo from '../../components/Detail/StoreDetailInfo/StoreDetail
 import { Store } from '../../types/data/storeInterface';
 // API
 import { JSON_API } from '../../services/api';
+import TopButton from '../../components/GlobalComponents/TopButton';
 
 const DetailPage: any = () => {
   const detailData = useLocation().state as Store;
@@ -27,7 +28,7 @@ const DetailPage: any = () => {
 
   // 유저의 나이 계산
   let age =
-    typeof birthDay !== 'object'
+    typeof birthDay === 'object'
       ? today.getFullYear() - birthDay.getFullYear()
       : users.userInfomation.age;
   const upForey =
@@ -99,6 +100,7 @@ const DetailPage: any = () => {
       <StoreDetailInfo detailData={data} />
       <DetailPageViews detailData={data} />
       <DetailMap />
+      <TopButton />
     </>
   );
 };

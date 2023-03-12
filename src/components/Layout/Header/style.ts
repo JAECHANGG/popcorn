@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import COLORS from '../../../assets/CSS/colors';
 import { FaBars } from 'react-icons/fa';
 import { BsMapFill } from 'react-icons/bs';
+import mapGreen from '../../../assets/Img/mapPin=green.svg';
+import mapHover from '../../../assets/Img/mapPin=orange.svg';
 
 export const Wrap = styled.div`
   max-width: 1040px;
@@ -10,9 +12,9 @@ export const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  
+
   @media screen and (max-width: 840px) {
-   padding: 0 10px;
+    padding: 0 10px;
   }
 `;
 
@@ -62,6 +64,7 @@ export const CategoryBtn = styled.button`
   top: -8px;
   border: none;
   background-color: transparent;
+  color: ${COLORS.black};
   font-family: 'Apple SD Gothic Neo';
   font-style: normal;
   font-weight: 700;
@@ -77,7 +80,6 @@ export const MapBtn = styled(CategoryBtn)`
     color: ${COLORS.white};
   }
 `;
-
 
 // Header
 export const MenuIconContainer = styled.div`
@@ -148,7 +150,7 @@ export const TextBackground = styled.div`
   padding-left: 10px;
   border-radius: 12px;
   &:hover {
-    background-color: ${COLORS.orange4};
+    background-color: ${COLORS.orange2};
   }
   @media screen and (max-width: 840px) {
     padding-top: 50px;
@@ -170,6 +172,17 @@ export const MenuImageBackgroundMobile = styled(MenuImageBackground)`
   background-color: ${COLORS.yellow1};
 `;
 
+export const mapDiv = styled.div``;
+export const mapPinImg = styled.div`
+  width: 30px;
+  height: 36px;
+  cursor: pointer;
+  background-image: url(${mapGreen});
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url(${mapHover});
+  }
+`;
 export const MenuText = styled.div`
   cursor: pointer;
   font-size: 16px;

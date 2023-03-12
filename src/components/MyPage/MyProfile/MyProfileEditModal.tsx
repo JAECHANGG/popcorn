@@ -48,7 +48,7 @@ const MyProfileEditModal = () => {
         setCurrentUser(currentUserInfos);
         setNickname(currentUserInfos?.displayName);
       } else {
-        return console.log('로그인 안됨');
+        return;
       }
     });
   }, [currentUser]);
@@ -144,12 +144,10 @@ const MyProfileEditModal = () => {
                     <S.MyContentBox>
                       <S.EditModalImgLabelInputWrapper>
                         <S.EditModalProfileImgLabel htmlFor="modalProfileUploadImg">
-                          {imgProfileUrl && (
-                            <S.EditModalProfileImgShow
-                              src={
-                                imgProfileUrl ? imgProfileUrl : basicProfileImg
-                              }
-                            />
+                          {imgProfileUrl ? (
+                            <S.EditModalProfileImgShow src={imgProfileUrl} />
+                          ) : (
+                            <S.EditModalProfileImgShow src={basicProfileImg} />
                           )}
                           <S.EditModalProfileImgInput
                             type="file"
