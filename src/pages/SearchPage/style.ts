@@ -235,6 +235,7 @@ export const FilterResult = styled.div`
 `;
 
 export const StoreContainer = styled.div`
+cursor: pointer;
   border: 1px solid ${COLORS.gray7};
   background-color: ${COLORS.gray8};
   border-radius: 8px;
