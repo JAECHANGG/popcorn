@@ -134,7 +134,7 @@ export const Category = styled.div`
   display: flex;
   align-items: center;
   &:hover {
-    background-color: ${COLORS.orange4};
+    background-color: ${COLORS.orange2};
   }
 `;
 
