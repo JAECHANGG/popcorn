@@ -150,6 +150,7 @@ export const IconTitleContainer = styled.div`
 `;
 
 export const SearchEventPeriod = styled.select`
+cursor: pointer;
   outline: none;
   border: none;
   background-color: transparent;
@@ -169,6 +170,7 @@ export const DatePickerWrapper = styled.div`
 `;
 
 export const DatePickerContainer = styled(DatePicker)`
+cursor: pointer;
   outline: none;
   border: none;
   display: flex;
