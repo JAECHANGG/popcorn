@@ -17,9 +17,6 @@ import LoadingAnimation from '../../components/GlobalComponents/LoadingAnimation
 const HomePage = () => {
   const { isLoading, isError, data, error } = useQuery('popup', getPopupData, {
     staleTime: 500000,
-    onSettled: () => {
-      console.log('호출 되면 안된다.');
-    },
   });
 
   if (isLoading) {
